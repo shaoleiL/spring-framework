@@ -19,6 +19,7 @@ package org.springframework.beans.factory;
 import org.springframework.lang.Nullable;
 
 /**
+ * 继承BeanFactory,在BeanFactory定义的基础上增加了对parentFactory的支持
  * Sub-interface implemented by bean factories that can be part
  * of a hierarchy.
  *

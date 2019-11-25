@@ -73,7 +73,9 @@ public class DefaultDocumentLoader implements DocumentLoader {
 		if (logger.isDebugEnabled()) {
 			logger.debug("Using JAXP provider [" + factory.getClass().getName() + "]");
 		}
+		// 1.创建DocumentBuilder，直接从DocumentBuilderFactory中获取，通过factory.newDocumentBuilder()方法
 		DocumentBuilder builder = createDocumentBuilder(factory, entityResolver, errorHandler);
+		// 2.使用DocumentBuilder来解析流信息
 		return builder.parse(inputSource);
 	}
 
